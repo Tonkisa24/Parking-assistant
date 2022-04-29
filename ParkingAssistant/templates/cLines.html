@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <style>
+    .container {
+      position: relative;
+      height: 1080px;
+      width: 1920px;
+    }
+
+    .container img {
+      height: 1080px;
+      width: 1920px;
+    }
+
+    .container .btn {
+      position: absolute;
+      top: 50%;
+      left: 6%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      background-color: #555;
+      color: white;
+      font-size: 16px;
+      padding: 12px 24px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      text-align: center;
+      height: 10em;
+      width: 10em;
+    }
+
+    .container .btn2 {
+      position: absolute;
+      top: 30%;
+      left: 95%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      background-color: #555;
+      color: white;
+      font-size: 16px;
+      padding: 12px 24px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      text-align: center;
+      height: 7em;
+      width: 7em;
+    }
+
+    .container .slider {
+      position: absolute;
+      top: 50%;
+      left: 95%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      border: none;
+      cursor: pointer;
+      height: 20em;
+      width: 20em;
+      writing-mode: bt-lr;
+      -webkit-appearance: slider-vertical;
+      padding: 0 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+</body>
+<div class="container">
+  <img src="{{ url_for('videoStreamCorrectedLines')}}" width="100%">
+  <form action="/noLines">
+    <input class="btn" name="forwardBtn" type="submit" id="customSwitch1" value="No Lines">
+  </form>
+  <form method="POST" action="correctedLines">
+    <input class="slider" type="range" orient="vertical" min="1" max="3" name="sliderValue">
+    <input class="btn2" type="submit" value="Save Preset" />
+  </form>
+</div>
+</body>
+
+</html>

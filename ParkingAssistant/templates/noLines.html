@@ -1,0 +1,50 @@
+<html>
+
+<head>
+
+  <style>
+    .container {
+      position: relative;
+      height: 1080px;
+      width: 1920px;
+    }
+
+    .container img {
+      height: 1080px;
+      width: 1920px;
+    }
+
+    .container .btn {
+      position: absolute;
+      top: 50%;
+      left: 6%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      background-color: #555;
+      color: white;
+      font-size: 16px;
+      padding: 12px 24px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      text-align: center;
+      height: 10em;
+      width: 10em;
+    }
+  </style>
+</head>
+
+<body>
+
+</body>
+<div class="container">
+  <img src="{{ url_for('videoStreamWithNoLines') }}">
+  <form action="/">
+    <div class="custom-control custom-switch">
+      <input class="btn" name="forwardBtn" type="submit"  id="customSwitch1" value="Lines">
+    </div>
+  </form>
+</div>
+</body>
+
+</html>
